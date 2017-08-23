@@ -8,15 +8,19 @@
     <ContentPage.BindingContext>
         <ViewModel:MainViewModel/>
     </ContentPage.BindingContext>
-	<ListView ItemSelected="{Binding EmployeeesList}"
+    <ListView ItemsSource="{Binding EmployeeesList}"
               HasUnevenRows="True">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
                     <ViewCell.View>
-                        <StackLayout Orientation="Horizontal">
-                            <Label Text="{Binding Name}"/>
-                            <Label Text="{Binding Department}"/>
+                        <StackLayout Orientation="Vertical"
+                                     Padding="12,6">
+                            <Label Text="{Binding Name}"
+                                   FontSize="24"/>
+                            <Label Text="{Binding Department}"
+                                   FontSize="18"
+                                   Opacity="0.6"/>
                         </StackLayout>
                     </ViewCell.View>
                 </ViewCell>

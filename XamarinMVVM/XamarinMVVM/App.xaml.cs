@@ -8,7 +8,7 @@ namespace XamarinMVVM
         {
             InitializeComponent();
 
-            MainPage = new XamarinMVVM.MainPage();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()
